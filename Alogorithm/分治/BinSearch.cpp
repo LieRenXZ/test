@@ -21,25 +21,13 @@ int BinSearch(int a[],int tag,int low,int high)
 
 int main()
 {
-    int n;
+    int n = 10;
     int tag = 99;//目标元素
-    int m;
+    int a[] = {0,1,2,3,4,5,6,7,8,9};
     int i;//记录是否找到及下标
-    cin>>n;
-    int a[n];
-    for(int j =0;j < n;j++)
-        cin>>a[j];
-    cin>>m;
-    int b[n];
-    for(int j = 0;j < m;j++)
-    cin>>b[j];
-    for(int j = 0;j < m;j++)
-    {
-    i = BinSearch(a,b[j],0,n-1);
+    i = BinSearch(a,tag,0,n-1);
     if(i >= 0)
-    cout<<"Yes"<<endl;
+    cout<<"a["<<i<<"] = "<<tag;
     else 
-    cout<<"No"<<endl;
-    i = 0;
-    }
+    cout<<"Not Found";
 }
